@@ -2,7 +2,11 @@
 if($_SERVER["REQUEST_METHOD"]){
 if(isset($_POST['ADD_to_cart'])){
 
-    echo'name';
+    if(isset($_SESSION['cart'])){
+
+    }else{
+        
+    }
 }
 
 }
