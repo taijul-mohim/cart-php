@@ -1,4 +1,11 @@
-<?php require("header.php");?> 
+<?php require("header.php");
+session_start();
+session_destroy();
+
+
+
+
+?> 
 <!DOCTYPE html>
 <html lang="en">
 
@@ -10,6 +17,7 @@
 </head>
 
 <body>
+
     <div class="container">
         <div class="row">
             <div class="col-lg-3">
@@ -29,7 +37,7 @@
             <div class="col-lg-3">
                 <form action="manage_cart.php" method="post">
                     <div class="card">
-                        <img class="card-img-top" src="image/1.jpg" alt="Card image cap">
+                        <img class="card-img-top" src="image/2.jpg" alt="Card image cap">
                         <div class="card-body text-center">
                             <h5 class="card-title">food 2</h5>
                             <p class="card-text">price 150</p>
@@ -43,7 +51,7 @@
             <div class="col-lg-3">
                 <form action="manage_cart.php" method="post">
                     <div class="card">
-                        <img class="card-img-top" src="image/1.jpg" alt="Card image cap">
+                        <img class="card-img-top" src="image/3.jpg" alt="Card image cap">
                         <div class="card-body text-center">
                             <h5 class="card-title">food 3</h5>
                             <p class="card-text">price 200</p>
@@ -57,7 +65,7 @@
             <div class="col-lg-3">
                 <form action="manage_cart.php" method="post">
                     <div class="card">
-                        <img class="card-img-top" src="image/1.jpg" alt="Card image cap">
+                        <img class="card-img-top" src="image/4.jpg" alt="Card image cap">
                         <div class="card-body text-center">
                             <h5 class="card-title">food 4</h5>
                             <p class="card-text">price 120</p>
