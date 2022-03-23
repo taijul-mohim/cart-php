@@ -1,5 +1,5 @@
 <?php require("header.php");
-session_start()
+session_start();
 
 
 
@@ -22,7 +22,7 @@ session_start()
             <div class="col-lg-12 text-center border rounded my-5">
                 <h1>My Cart</h1>
                 <table class="table">
-                    <thead>
+                    <thead class="text-center">
                         <tr>
                             <th scope="col">Serial name</th>
                             <th scope="col">Item name</th>
@@ -31,28 +31,46 @@ session_start()
                             <th scope="col"></th>
                         </tr>
                     </thead>
-                    <tbody>
-                        <tr>
-                            <th scope="row">1</th>
-                            <td>Mark</td>
-                            <td>Otto</td>
-                            <td>@mdo</td>
-                        </tr>
-                        <tr>
-                            <th scope="row">2</th>
-                            <td>Jacob</td>
-                            <td>Thornton</td>
-                            <td>@fat</td>
-                        </tr>
-                        <tr>
-                            <th scope="row">3</th>
-                            <td>Larry</td>
-                            <td>the Bird</td>
-                            <td>@twitter</td>
-                        </tr>
+                    <tbody class="text-center">
+                        <?php 
+                        $total=0;
+                        if (isset($_SESSION['cart'])) {
+                            foreach($_SESSION['cart'] as $key => $value){
+                                $total=$total+$value['Price'];
+                            
+                             echo
+                             "<tr>
+                             
+                             <td>1</td>
+                             <td>$value[Item_name]</td>
+                             <td>$value[Price]  </td>
+                             <td>  <input class='text-center' type= 'number' value='$value[Quantity]' min='1' max='10'>  </td>
+                             
+                              <td><button class='btn btn-sm btn-outline-danger'>REMOVE</button><td>
+                             
+                             </tr>";
+                             
+                             
+                             
+                             ;
+
+
+
+
+                            }
+                        }
+                      
+                        
+                        
+                        ?>
+                
                     </tbody>
                 </table>
+                
 
+            </div>
+            <div class="col-lg-4">
+                <h3>tottal :<?php echo  $total?></h3>
             </div>
         </div>
     </div>

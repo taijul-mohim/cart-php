@@ -26,7 +26,7 @@ if(isset($_POST['ADD_to_cart'])){
         
     }
     else{
-        $_SESSION['cart'][0]=array('Item_name'=>$_POST['item_name'],'price'=>$_POST['price'],'Quantity'=>1);
+        $_SESSION['cart'][0]=array('Item_name'=>$_POST['item_name'],'Price'=>$_POST['price'],'Quantity'=>1);
      
         echo "<script> 
         alert('Item  added');

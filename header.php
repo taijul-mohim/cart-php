@@ -22,7 +22,7 @@
       </li>
     </ul>
     <div>
-        <a href="" class="btn btn-outline-success"> My cart(0)</a>
+        <a href="mycart.php" class="btn btn-outline-success"> My cart(0)</a>
     </div>
 
    
