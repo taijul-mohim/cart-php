@@ -71,6 +71,20 @@ session_start();
             </div>
             <div class="col-lg-4">
                 <h3>tottal :<?php echo  $total?></h3>
+                <br>
+
+
+            
+                <div class="form-check">
+  <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+  <label class="form-check-label" for="defaultCheck1">
+    cash on delevery
+  </label>
+</div>
+
+
+
+                <button class=" btn btn-primary btn-block">pachaes</button>
             </div>
         </div>
     </div>
