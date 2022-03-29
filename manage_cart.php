@@ -36,6 +36,18 @@ if(isset($_POST['ADD_to_cart'])){
     }
 }
 
+if (isset($_POST["Remove_Item"])) {
+    foreach ($_SESSION['cart'] as $key => $value) {
+      unset($_SESSION['cart'][$key]) ;
+      $_SESSION['cart']=array_values($_SESSION['cart']);
+      echo "<script>alert('Item Removed')
+      window.location.href='mycart.php';
+      </script>";
+    }
+    
+}
+
+
 }
 
 

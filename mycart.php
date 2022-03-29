@@ -1,5 +1,5 @@
 <?php require("header.php");
-session_start();
+
 
 
 
@@ -37,17 +37,18 @@ session_start();
                         if (isset($_SESSION['cart'])) {
                             foreach($_SESSION['cart'] as $key => $value){
                                 $total=$total+$value['Price'];
-                            
+                            $sr=$key+1;
                              echo
                              "<tr>
                              
-                             <td>1</td>
+                             <td>$sr</td>
                              <td>$value[Item_name]</td>
                              <td>$value[Price]  </td>
                              <td>  <input class='text-center' type= 'number' value='$value[Quantity]' min='1' max='10'>  </td>
-                             
-                              <td><button class='btn btn-sm btn-outline-danger'>REMOVE</button><td>
-                             
+                             <form action='manage_cart.php' method='post'>
+                              <td><button name='Remove_Item' class='btn btn-sm btn-outline-danger'>REMOVE</button><td>
+                              <input type='hidden' name='Item_name' value='$value[Item_name]' >
+                              </form>
                              </tr>";
                              
                              
@@ -66,7 +67,7 @@ session_start();
                 
                     </tbody>
                 </table>
-                
+               
 
             </div>
             <div class="col-lg-4">

@@ -1,5 +1,5 @@
 <?php require("header.php");
-session_start();
+
 
 
 
@@ -16,10 +16,7 @@ session_start();
 </head>
 
 <body>
-    <?php 
-    print_r($_SESSION['cart']);
-    
-    ?>
+
 
     <div class="container">
         <div class="row">
