@@ -28,7 +28,7 @@
                             <th scope="col">Item name</th>
                             <th scope="col">Item price</th>
                             <th scope="col">Quentity</th>
-                            <th scope="col"></th>
+                            <th scope="col">Total</th>
                         </tr>
                     </thead>
                     <tbody class="text-center">
@@ -43,9 +43,11 @@
                              
                              <td>$sr</td>
                              <td>$value[Item_name]</td>
-                             <td>$value[Price]  </td>
+                             <td>$value[Price]<input type='hidden'  class='iprice' vlaue='$value[Price]'>  </td>
+                             <td class='itotal'></td>
                              <td>  <input class='text-center' type= 'number' value='$value[Quantity]' min='1' max='10'>  </td>
                              <form action='manage_cart.php' method='post'>
+                        
                               <td><button name='Remove_Item' class='btn btn-sm btn-outline-danger'>REMOVE</button><td>
                               <input type='hidden' name='Item_name' value='$value[Item_name]' >
                               </form>
@@ -64,7 +66,7 @@
                         
                         
                         ?>
-                
+   
                     </tbody>
                 </table>
                
